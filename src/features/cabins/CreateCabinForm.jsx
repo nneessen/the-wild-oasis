@@ -48,7 +48,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow label="Maximum Capacity" error={errors?.name?.message}>
+      <FormRow label="Maximum Capacity" error={errors?.maxCapacity?.message}>
         <Input
           type="number"
           id="maxCapacity"
@@ -62,7 +62,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow label="Regular Price" error={errors?.name?.message}>
+      <FormRow label="Regular Price" error={errors?.regularPrice?.message}>
         <Input
           type="number"
           id="regularPrice"
@@ -76,7 +76,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow label="Discount" error={errors?.name?.message}>
+      <FormRow label="Discount" error={errors?.discount?.message}>
         <Input
           type="number"
           id="discount"
@@ -90,7 +90,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow label="Description" error={errors?.name?.message}>
+      <FormRow label="Description" error={errors?.description?.message}>
         <Textarea
           type="number"
           id="description"
