@@ -7,7 +7,7 @@ import Textarea from "../../ui/Textarea";
 import { useForm } from "react-hook-form";
 import FormRow from "../../ui/FormRow";
 import { useCreateCabin } from "./useCreateCabin";
-import { useEditCabin } from "./useEditCabin";
+import { useUpdateCabin } from "./useUpdateCabin";
 
 function CreateCabinForm({ cabinToEdit = {} }) {
   const { id: editId, ...editValues } = cabinToEdit;
@@ -20,7 +20,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
   const { errors } = formState;
 
   const { createCabin, isCreating } = useCreateCabin();
-  const { editCabin, isEditing } = useEditCabin();
+  const { editCabin, isEditing } = useUpdateCabin();
 
   const isWorking = isCreating || isEditing;
 
