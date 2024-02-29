@@ -1,5 +1,4 @@
-import { useContext, useEffect, useRef } from "react";
-import { ModalContext } from "../ui/Modal";
+import { useEffect, useRef } from "react";
 
 export function useOutsideClick(handler, listenCapture = true) {
   const ref = useRef();
