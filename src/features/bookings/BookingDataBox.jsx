@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-leaked-render */
 import styled from "styled-components";
 import { format, isToday } from "date-fns";
 import {
@@ -164,7 +165,7 @@ function BookingDataBox({ booking }) {
         </DataItem>
 
         <Price isPaid={isPaid}>
-          <DataItem icon={<HiOutlineCurrencyDollar />} label={`Total price`}>
+          <DataItem icon={<HiOutlineCurrencyDollar />} label="Total price">
             {formatCurrency(totalPrice)}
 
             {hasBreakfast &&
