@@ -9,10 +9,8 @@ export function useUpdateUser() {
     mutationFn: updateCurrentUser,
     onSuccess: ({ user }) => {
       toast.success("User successfully updated");
-      // update data manually in  the cache --> this isn't working the way i expected.
-      //   queryClient.setQueryData("user", user);
-
-      queryClient.invalidateQueries({ queryKey: ["user"] });
+      // update data manually in  the cache
+      queryClient.setQueryData(["user"], user);
     },
     onError: (err) => toast.error(err.message),
   });
