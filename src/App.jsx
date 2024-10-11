@@ -12,7 +12,6 @@ import Login from "./pages/Login";
 import Account from "./pages/Account";
 import Settings from "./pages/Settings";
 import Users from "./pages/Users";
-import PageNotFound from "./pages/PageNotFound";
 import AppLayout from "./ui/AppLayout";
 import Booking from "./pages/Booking";
 import Checkin from "./pages/Checkin";
@@ -53,7 +52,7 @@ function App() {
               <Route path="settings" element={<Settings />} />
             </Route>
             <Route path="login" element={<Login />} />
-            <Route path="*" element={<PageNotFound />} />
+            <Route path="" element={<Login />} />
           </Routes>
         </BrowserRouter>
 

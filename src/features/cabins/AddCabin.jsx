@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-leaked-render */
 import Button from "../../ui/Button";
 import CreateCabinForm from "../cabins/CreateCabinForm";
 import Modal from "../../ui/Modal";

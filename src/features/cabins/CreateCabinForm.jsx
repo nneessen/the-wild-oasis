@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-leaked-render */
 import Input from "../../ui/Input";
 import Form from "../../ui/Form";
 import Button from "../../ui/Button";
@@ -10,10 +9,6 @@ import { useCreateCabin } from "./useCreateCabin";
 import { useUpdateCabin } from "./useUpdateCabin";
 
 function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
-  // 'onCloseModal' is used in Modal.Winndow and is able to be accessed
-  // by using cloneElement in the Window component and passing in children,
-  // { onCloseModal: close }
-
   const { id: editId, ...editValues } = cabinToEdit;
 
   const isEditSession = Boolean(editId);
@@ -35,26 +30,26 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
       UpdateCabin(
         { newCabinData: { ...data, image }, id: editId },
         {
-          onSuccess: (data) => {
+          onSuccess: () => {
             reset();
             onCloseModal?.();
           },
-        }
+        },
       );
     else
       createCabin(
         { ...data, image: image },
         {
-          onSuccess: (data) => {
+          onSuccess: () => {
             reset();
             onCloseModal?.();
           },
-        }
+        },
       );
   }
 
-  function onError(errors) {
-    // console.log(errors);
+  function onError() {
+    console.log(errors);
   }
 
   return (
