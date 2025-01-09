@@ -10,7 +10,7 @@ import { useCreateCabin } from "./useCreateCabin";
 import { useUpdateCabin } from "./useUpdateCabin";
 
 function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
-  // 'onCloseModal' is used in Modal.Winndow and is able to be accessed
+  // 'onCloseModal' is used in Modal.Window and is able to be accessed
   // by using cloneElement in the Window component and passing in children,
   // { onCloseModal: close }
 
@@ -39,7 +39,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
             reset();
             onCloseModal?.();
           },
-        }
+        },
       );
     else
       createCabin(
@@ -49,7 +49,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
             reset();
             onCloseModal?.();
           },
-        }
+        },
       );
   }
 

@@ -4,6 +4,7 @@ import { HiOutlineUser } from "react-icons/hi2";
 import ButtonIcon from "./ButtonIcon";
 import { useNavigate } from "react-router-dom";
 import DarkModeToggle from "./DarkModeToggle";
+import Input from "./Input";
 
 const StyledHeaderMenu = styled.ul`
   display: flex;
@@ -14,6 +15,9 @@ function HeaderMenu() {
   const navigate = useNavigate();
   return (
     <StyledHeaderMenu>
+      <li>
+        <Input />
+      </li>
       <li>
         <ButtonIcon onClick={() => navigate("/account")}>
           <HiOutlineUser />
